@@ -20,6 +20,8 @@
 //            negatives so what you have to do is you will either have positives extra or negatives extras so firstly,
 //            do the same process as you did for previous version for the equal nos of the positives and negatives then add the extras
 //            of either positives or negatives in the end.
+//   
+//            So the above solution for this version take TC of O(n) + O(n) = O(2n) an SC of O(n)
 
 
 import java.util.ArrayList;
