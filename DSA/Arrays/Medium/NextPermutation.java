@@ -1,3 +1,11 @@
+// Brute-Force: Step 1: Find all possible permutations of elements present and store them.
+//              Step 2: Search input from all possible permutations.
+//              Step 3: Print the next permutation present right after it.
+// For reference of how to find all possible permutations, follow up https://www.youtube.com/watch?v=f2ic2Rsc9pU&t=32s.
+// This video shows for distinct elements but code works for duplicates too.
+
+// Optimal: The steps and code is provided below.
+
 import java.util.*;
 
 public class NextPermutation {
