@@ -24,7 +24,7 @@ class CountDigits {
     public static int brute(int n) {
         int count = 0;
 
-        while (n > 0) {
+        while (n != 0) {
             count ++;
             n = n / 10;
         }
@@ -40,7 +40,7 @@ class CountDigits {
     }
 
     public static void main(String[] args) {
-        int n = 1234568;
+        int n = -1234568;
         System.out.println(brute(n));
         System.out.println(optimal(n));
     }
