@@ -3,7 +3,7 @@
 // SubString: We iterate through the string and check 
 //           if the current char is in the range of a-z and A-Z, 
 //           if yes we ignore the char if no we remove the char.
-// TC : O(n) due to substring and concatenation and SC: O(n) due to new strings
+// TC : O(n*n) due to substring and concatenation and SC: O(n) due to new strings
 // 
 // StringBuilder: another optimal solution that combines the simplicity of using StringBuilder (to avoid 
 //                the inefficiencies of repeatedly creating new String objects) and

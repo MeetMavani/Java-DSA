@@ -2,7 +2,7 @@
 //           Then we remove the vowel by merging the above two substrings.
 //           substring(0, i): this will return the first half of string ending just before the vowel
 //           substing(i+1): returns second half of string starting immediate after the vowel 
-// TC : O(n) due to substring and concatenation and SC: O(n) due to new strings
+// TC : O(n*n) due to substring and concatenation and SC: O(n) due to new strings
 
 // Better: We use StringBuilder class for string manipulation
 //         Using the same conditions instead of removing vowels we take chars from the string except vowels

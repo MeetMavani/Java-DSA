@@ -1,6 +1,6 @@
 // SubString: We use the same algorithm created in the problem RemoveVowels and just change the conditon 
 //            for detecting the whitespaces.
-// TC : O(n) due to substring and concatenation and SC: O(n) due to new strings
+// TC : O(n*n) due to substring and concatenation and SC: O(n) due to new strings
 // 
 // StringBuilder: another optimal solution that combines the simplicity of using StringBuilder (to avoid 
 //                the inefficiencies of repeatedly creating new String objects) and
