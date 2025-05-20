@@ -1,0 +1,72 @@
+1. Name: Set (Interface), HashSet (Implementation)
+
+2. Intro / Definition:
+A Set is a collection that does not allow duplicate elements.
+It models the mathematical set abstraction—each element is unique.
+Java’s Set is an interface, and HashSet is the most commonly used implementation.
+HashSet uses a HashMap internally to store its elements.
+
+3. Syntax (Java):
+
+Set<String> set = new HashSet<>();
+set.add("apple");
+set.add("banana");
+set.contains("apple");   // true
+set.remove("banana");
+
+4. Types of Set in Java:
+
+Type	Ordering	Performance
+HashSet	No order	Fastest (O(1) for add, remove, search)
+LinkedHashSet	Maintains insertion order	Slightly slower than HashSet
+TreeSet	Sorted (natural or comparator)	O(log n) operations (uses Red-Black Tree)
+
+5. Key Operations & Time Complexities (HashSet):
+
+Operation	Time Complexity
+Add	O(1) avg, O(n) worst
+Remove	O(1) avg, O(n) worst
+Contains	O(1) avg
+Size	O(1)
+
+✅ Worst-case occurs during rehashing or hash collisions.
+
+6. Common Use Cases in Programming:
+
+Removing duplicates from a list/array
+Checking for existence in constant time
+Frequency checks (with set size)
+Mathematical set operations (union, intersection, difference)
+Efficient lookups for visited nodes in graph/tree traversal
+
+7. Real-World Analogy / Use Case:
+
+Voter list: Each person can vote once, so only one entry per person.
+Attendance register: A student is either present or not, can’t be marked twice.
+Unique usernames on a platform: duplicates not allowed.
+
+✅ Other Examples:
+Maintaining list of unique visitors to a website
+Avoiding duplicate emails in a newsletter list
+Tracking visited pages in a web crawler
+
+8. Strengths & Limitations:
+
+✅ Strengths:
+Fast uniqueness check
+Ideal for de-duplication
+Clean mathematical abstraction
+
+❌ Limitations:
+No indexing or position-based access
+Not suitable when duplicate elements are needed
+No guaranteed order (unless using LinkedHashSet or TreeSet)
+
+9. Common Interview Questions:
+
+Remove duplicates from an array
+Find if an array contains duplicates
+Find common elements in two arrays (intersection)
+Implement union and intersection using sets
+Find the first repeating/non-repeating element using a Set
+Track visited nodes during DFS/BFS

@@ -1,0 +1,69 @@
+1. Name: Queue
+
+2. Intro / Definition:
+A Queue is a linear data structure that follows the FIFO (First-In-First-Out) principle—the first element added is the first one removed.
+Think of it as a real-life line at a ticket counter: the person who comes first gets served first.
+
+3. Syntax (Java):
+
+Queue<Integer> queue = new LinkedList<>();
+queue.add(10);       // enqueue
+queue.offer(20);     // enqueue (returns false if fails)
+queue.remove();      // dequeue
+queue.poll();        // dequeue (returns null if empty)
+queue.peek();        // view front
+
+✅ Note: Queue is an interface in Java. Common implementations:
+LinkedList
+ArrayDeque
+PriorityQueue (for priority-based order)
+
+4. Types:
+
+Simple Queue: FIFO behavior
+Circular Queue: Wraps around, ideal for memory reuse
+Priority Queue: Elements are dequeued based on priority
+Deque (Double-Ended Queue): Elements can be added/removed from both ends
+
+5. Key Operations & Time Complexities:
+
+Operation	Time Complexity
+Enqueue	O(1)
+Dequeue	O(1)
+Peek (Front)	O(1)
+Search	O(n)
+
+6. Common Use Cases in Programming:
+
+Task scheduling (OS, printers)
+BFS in Graphs and Trees
+Producer-consumer problems
+Caching (Least Recently Used - LRU)
+Order processing systems
+
+7. Real-World Analogy / Use Case:
+
+Ticket queue: First person in line is served first.
+Print jobs queue: First submitted job is printed first.
+Customer service line: Calls are answered in the order they come.
+
+✅ Other Examples:
+Queue at a toll booth
+CPU task scheduling (round-robin)
+
+8. Strengths & Limitations:
+
+✅ Strengths:
+Great for ordered processing (fairness)
+Fast insertion/removal from ends (in proper implementations)
+
+❌ Limitations:
+No random access
+Requires good implementation to avoid memory waste (hence circular queues)
+
+9. Common Interview Questions:
+Implement a queue using two stacks.
+Implement a circular queue.
+Design a system where tasks are processed in order of arrival.
+Level-order traversal of a binary tree (uses queue).
+How is a queue used in BFS?

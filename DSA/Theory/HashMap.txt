@@ -1,0 +1,72 @@
+1. Name: HashMap
+
+2. Intro / Definition:
+A HashMap is a part of Java’s Collection Framework that stores data as key-value pairs. It allows constant-time average complexity for insertion, deletion, and lookup.
+It is unordered and does not allow duplicate keys (but allows duplicate values).
+
+Under the hood, it uses a hash function to compute an index into an internal array of buckets, and handles collisions using Linked Lists or Trees (after Java 8).
+
+3. Syntax (Java):
+
+HashMap<String, Integer> map = new HashMap<>();
+map.put("apple", 10);
+map.put("banana", 20);
+map.get("apple");       // 10
+map.containsKey("apple");  // true
+map.remove("banana");
+
+4. Types:
+
+HashMap: No order, allows one null key.
+LinkedHashMap: Maintains insertion order.
+TreeMap: Maintains sorted order of keys (based on Comparable or Comparator).
+ConcurrentHashMap: Thread-safe version for concurrency.
+
+5. Key Operations & Time Complexities:
+
+Operation	Time Complexity (Avg)	Time Complexity (Worst)
+Insert (put)	O(1)	O(n) (if many collisions)
+Lookup (get)	O(1)	O(n)
+Delete (remove)	O(1)	O(n)
+Search by key	O(1)	O(n)
+
+✅ Worst case occurs when all keys hash to the same bucket (very rare if hash function is good).
+Java 8+ uses Balanced Tree (Red-Black Tree) in place of LinkedList when collisions are high.
+
+6. Common Use Cases in Programming:
+
+Caching (key = query, value = result)
+Counting frequencies (word count, character count)
+Lookup tables (username → user object)
+Grouping data (group anagrams, group by category)
+Storing graph edges (Adjacency list: Map<Node, List<Node>>)
+
+7. Real-World Analogy / Use Case:
+Imagine a real-life dictionary or phonebook where you search by word or name (key) to get the meaning or number (value).
+Also like an index in a book: it tells you on which page a topic (key) appears (value).
+
+✅ Other Examples:
+Map of country names to their dialing codes
+Map of student roll numbers to their marks
+Map of product IDs to their stock quantity
+
+8. Strengths & Limitations:
+
+✅ Strengths:
+Fast lookup, insertion, and deletion (O(1) avg)
+Highly flexible (works with any object type for keys and values)
+Good for implementing associative arrays, caches, or dictionaries
+
+❌ Limitations:
+Unordered (if order matters, use LinkedHashMap or TreeMap)
+Keys must implement hashCode() and equals() properly
+Not thread-safe (use ConcurrentHashMap or synchronize manually)
+
+9. Common Interview Questions:
+
+Find the first non-repeating character in a string
+Group anagrams using a HashMap<String, List<String>>
+Implement LRU cache (uses HashMap + DoublyLinkedList)
+Count frequencies of elements in an array
+Two Sum problem (store complements in HashMap)
+How does HashMap handle collisions internally?

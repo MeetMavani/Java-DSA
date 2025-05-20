@@ -1,0 +1,68 @@
+1. Name: ArrayList
+
+2. Intro / Definition:
+An ArrayList is a part of Java’s Collection Framework. It is a resizable array implementation of the List interface, which grows dynamically as elements are added.
+Unlike arrays, you don’t need to define the size beforehand.
+
+3. Syntax (Java):
+
+
+
+ArrayList<String> list = new ArrayList<>();
+list.add("Apple");
+list.add(1, "Banana");  // insert at index
+list.get(0);            // access element
+list.remove("Apple");
+list.size();
+✅ Internally uses a dynamic array. When capacity is exceeded, a new larger array is created, and the elements are copied over.
+
+4. Types:
+ArrayList itself doesn't have subtypes, but it’s a generic class, so you can use:
+ArrayList<Integer>
+ArrayList<String>
+ArrayList<CustomClass>
+
+5. Key Operations & Time Complexities:
+
+Operation	Time Complexity
+Add at End	O(1) amortized
+Add at Index	O(n) (due to shifting)
+Remove by Index	O(n)
+Access by Index	O(1)
+Search (Linear)	O(n)
+Resize (Internal)	O(n) (when growing)
+
+6. Common Use Cases in Programming:
+
+Storing dynamic lists of elements
+Maintaining ordered data with index access
+Replacing primitive arrays when size is unknown or changes frequently
+Frequently used in interview problems involving lists, subarrays, etc.
+
+7. Real-World Analogy / Use Case:
+Like a resizable drawer: it starts small but grows when you add more items.
+You can directly open the drawer and pick the 5th item (random access), but inserting/removing something in the middle makes you shift things around.
+
+✅ Other Examples:
+Shopping cart items in an e-commerce site
+Maintaining a list of suggestions in a search bar
+
+8. Strengths & Limitations:
+
+✅ Strengths:
+Dynamic resizing
+Fast random access
+Maintains insertion order
+
+❌ Limitations:
+Slower insertions/removals in the middle (due to shifting)
+Resizing involves copying entire array → costly for large data
+Not thread-safe (use Collections.synchronizedList() or CopyOnWriteArrayList for thread safety)
+
+9. Common Interview Questions:
+
+Difference between Array and ArrayList
+When to use ArrayList vs LinkedList?
+How does ArrayList grow internally?
+Implement your own dynamic array (like ArrayList)
+Why is accessing an element in ArrayList O(1)?

@@ -1,0 +1,40 @@
+1. Name: Stack
+
+2.Def: A linear data structure following LIFO (Last-In-First-Out) principle—elements are added and removed from the top.
+
+3. Syntax (Java):
+    Stack<Integer> stack = new Stack<>();
+    stack.push(1);
+    int top = stack.pop();
+
+4. Types:
+    Stack (using java.util.Stack)
+    Deque as a stack (ArrayDeque is recommended over Stack class)
+
+5. Key Operations & Time Complexities:
+push(): O(1)
+pop():  O(1)
+peek(): O(1)
+isEmpty(): O(1)
+
+6. Common Use Cases in Programming:
+
+Undo/Redo operations
+Function call stack
+Parsing expressions (like brackets validation)
+
+7. Real-World Analogy / Use Case:
+Like a stack of plates: you can only add or remove the top plate.
+Another example: browser back button—go back to the last visited page.
+
+8. Strengths & Limitations:
+
+✅ Fast operations (O(1))
+❌ Not ideal for random access or ordered traversal
+
+9. Common Interview Questions:
+
+Implement a stack using two queues.
+How is recursion implemented internally using a stack?
+
+

@@ -1,0 +1,67 @@
+1. Name: LinkedList
+
+2. Def: A LinkedList is a linear data structure where elements(called nodes) are stored in memory non-contiguously and 
+        are linked using pointers(references).
+        Each Node contains: 
+        - Data (value)
+        - Pointer (reference to the next node)
+
+        Unlike arrays, LinkedLists can grow and shrink dynamically, and insertions/deletions are efficient at the beginning or middle of the list.
+
+3. Syntax: 
+LinkedList<String> list = new LinkedList<>();
+list.add("A");
+list.add("B");
+list.addFirst("Start");
+list.removeLast();
+
+4. Types:
+Singly Linked List: Each node points to the next node.
+Doubly Linked List: Each node has pointers to both the previous and next nodes.
+Circular Linked List: Last node points to the head, forming a circle.
+
+5. Key Operations & Time Complexities: 
+
+Operation	                                   Time Complexity
+Insert at Beginning   =>  .addFirst()	                O(1)
+Insert at End (tail)  =>  .addlast()                    O(1) (if tail ref maintained) / O(n) otherwise
+Insert in Middle      =>  .add(i,value)	                O(n)
+Delete from Beginning =>  .remove()                     O(1)
+Delete from Middle/End	   ''                           O(n)
+Search by Value	           ''                           O(n)
+Access by Index	      =>  .get()                        O(n)
+
+6. Common Use Cases in Programming:
+When frequent insertions/deletions are needed (especially in middle or ends)
+Implementing stacks, queues, adjacency lists in graphs
+Undo functionality in text editors
+Memory-efficient dynamic data scenarios
+
+7. Real-World Analogy / Use Case:
+Imagine a treasure hunt where each clue leads you to the next clue. You don’t know all clues beforehand, but each one gives you the next one’s location.
+Or like a train where each compartment is connected to the next one—you can add/remove compartments without needing to shift the whole train.
+
+✅ Other examples:
+Music playlist where songs can be added/removed dynamically
+Web browser history (back/forward navigation)
+
+8. Strengths & Limitations:
+
+✅ Strengths:
+Dynamic size (no need to pre-define size)
+Efficient insert/delete at head or tail
+Good for implementing queues and stacks
+
+❌ Limitations:
+Slow access: must traverse from head to reach an element
+Extra memory for pointers
+No random access like arrays (get(index) is O(n))
+
+9. Common Interview Questions:
+
+Implement a singly/doubly linked list from scratch.
+Reverse a linked list.
+Detect a cycle in a linked list (Floyd’s algorithm).
+Merge two sorted linked lists
+Find the middle of a linked list in one pass.
+Difference between LinkedList and ArrayList.

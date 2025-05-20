@@ -1,0 +1,60 @@
+1. Name: Array 
+
+2. Def : An array is an fixed-size, linear data structure that stores elements of same data type in contiguous memory locations, 
+         accessible via index
+3. Syntax: 
+// Declaration and initialization
+int[] arr = new int[5];
+int[] arr2 = {1, 2, 4, 5, 8};
+System.out.println(arr2[2]);  // Output: 4
+
+4. Types: 
+One-Dimensional Array,
+Two-Dimensional Array (Matrix),
+Multidimensional Array,
+Jagged Array (array of arrays with different lengths).
+
+5. Key Operations & Time Complexities:
+
+Operation	     Time Complexity
+
+Access by Index	    O(1)
+Update Value	    O(1)
+Search (Linear)	    O(n)
+Insert at Index	    O(n) (due to shifting)
+Delete at Index	    O(n) (due to shifting)
+Traversal	        O(n)
+
+6. Common Use Cases in Programming:
+Storing fixed-size collections (e.g., marks of 5 students)
+Matrix computations
+Static data sets like months, weekdays
+Dynamic programming tables
+Temporary storage (e.g., buffers)
+
+7. Real-World Analogy / Use Case:
+Imagine a row of lockers, each with a number. If you know the number (index), you can immediately access what's inside — super fast!
+Also like the seats in a theatre: each seat has a fixed number and doesn't change position.
+
+✅ Other Examples:
+//    Storing the prices of 10 fixed products.
+//    A monthly temperature record for each day of the month (fixed 30/31 days).
+
+8. Strengths & Limitations:
+
+✅ Strengths:
+Constant time access using index
+Simple and memory-efficient (no extra memory for pointers)
+
+❌ Limitations:
+Fixed size (can’t grow or shrink)
+Costly insertions/deletions due to element shifting
+Only supports same data type (in primitive arrays)
+
+9. Common Interview Questions:
+
+Write a program to reverse an array.
+Find the second largest element in an array.
+Difference between Array and ArrayList.
+How to remove duplicates from an array?
+
