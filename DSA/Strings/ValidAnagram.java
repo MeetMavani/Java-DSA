@@ -49,6 +49,6 @@ public class ValidAnagram {
         String t = "nagaaram";
 
         System.out.println("Using array method: " + optimal(s, t)); // true
-        System.out.println("Using hashmap method: " + hashmap(s, t)); // true
+        System.out.println("Using hashmap method: " + hashmap(s, t)); 
     }
 }
